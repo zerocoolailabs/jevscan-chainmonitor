@@ -1,0 +1,172 @@
+[
+  {
+    "attack_txs": [
+      "0xd20b3b31a682322eb0698ecd67a6d8a040ccea653ba429ec73e3584fa176ff2b"
+    ],
+    "chain_id": 1,
+    "date": "2024-10-01",
+    "id": "fire-token-2024-10",
+    "name": "Fire Token",
+    "sources": [
+      "https://blog.verichains.io/p/fire-token-incident-analysis",
+      "https://www.quillaudits.com/blog/hack-analysis/fire-token-exploit"
+    ],
+    "window": {
+      "end": 20869375,
+      "start": 20869375
+    }
+  },
+  {
+    "attack_txs": [
+      "0xc27c3ec61c61309c9af35af062a834e0d6914f9352113617400577c0f2b0e9de"
+    ],
+    "chain_id": 1,
+    "date": "2024-08-28",
+    "id": "aave-paraswap-repay-adapter-2024-08",
+    "name": "Aave ParaSwap Repay Adapter",
+    "sources": [
+      "https://blog.verichains.io/p/aave-paraswap-repay-adapter-hack",
+      "https://blog.solidityscan.com/aave-repay-adapter-hack-analysis-aafd234e15b9/"
+    ],
+    "window": {
+      "end": 20624704,
+      "start": 20624704
+    }
+  },
+  {
+    "attack_txs": [
+      "0x3b19e152943f31fe0830b67315ddc89be9a066dc89174256e17bc8c2d35b5af8"
+    ],
+    "chain_id": 1,
+    "date": "2023-08-02",
+    "id": "uwerx-2023-08",
+    "name": "Uwerx",
+    "sources": [
+      "https://www.olympix.security/biweekly-exploits/uwerx-eralend-bno-from-burn-loops-to-broken-withdrawals",
+      "https://blog.78researchlab.com/db3e823f-98cb-4314-bfe6-e437a3a75f23"
+    ],
+    "window": {
+      "end": 17826203,
+      "start": 17826203
+    }
+  },
+  {
+    "attack_txs": [
+      "0xe1c76241dda7c5fcf1988454c621142495640e708e3f8377982f55f8cf2a8401"
+    ],
+    "chain_id": 1,
+    "date": "2020-11-17",
+    "id": "origin-dollar-2020-11",
+    "name": "Origin Dollar OUSD",
+    "sources": [
+      "https://medium.com/origin-protocol-spanish/urgente-ousd-fue-hackeado-y-ha-habido-una-p%C3%A9rdida-de-fondos-38067780b4b6",
+      "https://www.panewslab.com/zh/articles/D97473315"
+    ],
+    "window": {
+      "end": 11272255,
+      "start": 11272255
+    }
+  },
+  {
+    "attack_txs": [
+      "0xe1f375a47172b5612d96496a4599247049f07c9a7d518929fbe296b0c281e04d"
+    ],
+    "chain_id": 1,
+    "date": "2020-11-12",
+    "id": "akropolis-2020-11",
+    "name": "Akropolis Delphi savings pools",
+    "sources": [
+      "https://peckshield.medium.com/akropolis-incident-root-cause-analysis-c11ee59e05d4",
+      "https://www.panewslab.com/zh/articles/D75081598"
+    ],
+    "window": {
+      "end": 11242695,
+      "start": 11242695
+    }
+  },
+  {
+    "attack_txs": [
+      "0x35f8d2f572fceaac9288e5d462117850ef2694786992a8c3f6d02612277b0877"
+    ],
+    "chain_id": 1,
+    "date": "2020-10-26",
+    "id": "harvest-finance-2020-10",
+    "name": "Harvest Finance USDC vault",
+    "sources": [
+      "https://aftermath.digital/exploit/2021/05/06/Harvest-Finance-Economic-Flash-Loan-Attack-October-2020/",
+      "https://www.feixiaohao.com/news/9466530.html"
+    ],
+    "window": {
+      "end": 11129474,
+      "start": 11129474
+    }
+  },
+  {
+    "attack_txs": [
+      "0xa6f63fcb6bec8818864d96a5b1bb19e8bd85ee37b2cc916412e720988440b2aa"
+    ],
+    "chain_id": 1,
+    "date": "2023-02-02",
+    "id": "orion-protocol-2023-02",
+    "name": "Orion Protocol",
+    "sources": [
+      "https://slowmist.medium.com/an-analysis-of-the-attack-on-orion-protocol-c7aef70aff83",
+      "https://www.numencyber.com/analysis-of-orionprotocol-reentrancy-attack-with-poc/"
+    ],
+    "window": {
+      "end": 16542148,
+      "start": 16542148
+    }
+  },
+  {
+    "attack_txs": [
+      "0xd55e43c1602b28d4fd4667ee445d570c8f298f5401cf04e62ec329759ecda95d"
+    ],
+    "chain_id": 1,
+    "date": "2023-04-13",
+    "id": "yearn-iearn-yusdt-2023-04",
+    "name": "Yearn iEarn yUSDT",
+    "sources": [
+      "https://techflowpost.com/en-US/article/11989",
+      "https://blockapex.io/yearn-finance-hack-analysis/"
+    ],
+    "window": {
+      "end": 17036779,
+      "start": 17036779
+    }
+  },
+  {
+    "attack_txs": [
+      "0x57ee419a001d85085478d04dd2a73daa91175b1d7c11d8a8fb5622c56fd1fa69"
+    ],
+    "chain_id": 1,
+    "date": "2025-06-17",
+    "id": "meta-pool-2025-06",
+    "name": "Meta Pool mpETH",
+    "sources": [
+      "https://blog.verichains.io/p/free-minting-from-meta-pool-ethereum",
+      "https://blog.solidityscan.com/meta-pool-hack-analysis-fef7796f2303/"
+    ],
+    "window": {
+      "end": 22722911,
+      "start": 22722911
+    }
+  },
+  {
+    "attack_txs": [
+      "0x23fcf9d4517f7cc39815b09b0a80c023ab2c8196c826c93b4100f2e26b701286"
+    ],
+    "chain_id": 1,
+    "date": "2024-02-28",
+    "id": "seneca-2024-02-representative-drain",
+    "name": "Seneca Protocol representative exploit transaction",
+    "sources": [
+      "https://vaas.beosin.com/resources/lack-of-function-checking---analysis-of-senecausd-security-incident",
+      "https://crypto.training/hacks/2024-02-seneca/"
+    ],
+    "window": {
+      "end": 19325937,
+      "start": 19325937
+    }
+  }
+]
