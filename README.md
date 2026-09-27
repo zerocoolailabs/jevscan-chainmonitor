@@ -13,9 +13,9 @@ Scanning a block took an average of 2.7 seconds with supporting data, such as co
 3. **Enrich.** Add historical prices, contract history, address labels and mixer funding.
 4. **Classify.** Send each transaction's fact sheet to Jev and flag possible attacks.
 
-## Better suited to a single protocol
+## Another use for protocol teams
 
-We built Jevscan to scan every transaction in every block. However, we believe it would be much more powerful in the hands of a protocol team that adds its invariants, permissions and important addresses, and could even check relevant storage changes every block. Jev could then distinguish legitimate operations from broken protocol rules using the team's own knowledge.
+We built Jevscan to scan every transaction in every block. A protocol team could also use it to watch its own contracts, adding invariants, permissions and important addresses to the transaction facts. It could monitor relevant storage changes each block, giving Jev more context to assess activity against the protocol's rules.
 
 ## Run
 
