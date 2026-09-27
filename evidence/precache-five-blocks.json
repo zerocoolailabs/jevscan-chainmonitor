@@ -1,0 +1,487 @@
+{
+  "schema": "jevscan-precache-timing-v1",
+  "source_commit": "7d4d1822609eb46e7e08d3a74ad29f95238d4c26",
+  "date": "2026-09-26",
+  "methodology": {
+    "selected_before_timing": true,
+    "unique_blocks": 5,
+    "unique_transactions": 829,
+    "timed_passes": 2,
+    "cache": "Existing research workspace, followed by one unscored single-block collection per selected block to fill missing supporting lookups.",
+    "timed_work": "Production gather_facts and scoring.score; block headers, receipts and call traces fetched afresh; fact records rebuilt; fresh Jev answers.",
+    "cache_validation": "Timed phase rejected any supporting HTTP or supporting RPC cache miss. Only block/header, receipt and trace RPC calls were allowed. Timed facts digests matched preparation.",
+    "excluded": "Index construction, connection setup, cache preparation, finalization wait, and writing score artifacts.",
+    "preparation_scope": "Only the five selected blocks. Preparation reused existing labels, mixer index and metadata caches; it is not a cold-start benchmark.",
+    "stage_notes": "Collect includes block fetching and remaining collection overhead. Extract includes validation, extraction and assembling enriched records. Classify includes rendering and paid classification.",
+    "aggregation": "Both complete timed passes are included; duplicate transactions do not expand the coverage benchmark."
+  },
+  "reports": {
+    "warm": {
+      "billed_input_tokens": 0,
+      "blocks": [
+        {
+          "attack": "0xffbbd492e0605a8bb6d490c3cd879e87ff60862b0684160d08fd5711e7a872d3",
+          "block": 22785461,
+          "classify_seconds": 0,
+          "collect_seconds": 0.9845012520090677,
+          "enrich_seconds": 18.034902957995655,
+          "extract_seconds": 0.052778790006414056,
+          "facts_sha256": "df8a188bf3ef4b6b71ad0dbf31d3708aade80d0e0de9cd2d1fd06f19a5554369",
+          "incident": "resupply-2025-06",
+          "network_calls": {
+            "http:etherscan": 28,
+            "http:llama": 1,
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_call": 14,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 19.0721844159998,
+          "transactions": 209
+        },
+        {
+          "attack": "0x8b74995d1d61d3d7547575649136b8765acb22882960f0636941c44ec7bbe146",
+          "block": 17740955,
+          "classify_seconds": 0,
+          "collect_seconds": 1.2847213019849733,
+          "enrich_seconds": 9.354585749999387,
+          "extract_seconds": 0.13674078101757914,
+          "facts_sha256": "c4c8169989a29e47ac695ec936246543f24e1a82b535e42e03cbc3cae072aa7e",
+          "incident": "conic-2023-07",
+          "network_calls": {
+            "http:etherscan": 15,
+            "http:llama": 1,
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_call": 9,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 10.776048832995002,
+          "transactions": 149
+        },
+        {
+          "attack": "0xe2912b8bf34d561983f2ae95f34e33ecc7792a2905a3e317fcc98052bce66431",
+          "block": 19771059,
+          "classify_seconds": 0,
+          "collect_seconds": 1.2353989179100608,
+          "enrich_seconds": 15.645494083000813,
+          "extract_seconds": 0.04056299908552319,
+          "facts_sha256": "e1860e60ee0c74ed9b0178b3a1e21bf45cce7ad3a942fe89e1ee0a37c0bb8bc1",
+          "incident": "pike-2024-04",
+          "network_calls": {
+            "http:etherscan": 28,
+            "http:llama": 1,
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_call": 3,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 16.921456457988825,
+          "transactions": 146
+        },
+        {
+          "attack": "0xc6c3331fa8c2d30e1ef208424c08c039a89e510df2fb6ae31e5aa40722e28fd6",
+          "block": 19021454,
+          "classify_seconds": 0,
+          "collect_seconds": 0.8315938829036895,
+          "enrich_seconds": 11.36169258398877,
+          "extract_seconds": 0.05786224111216143,
+          "facts_sha256": "8e38927d21145fb8fa259d6969920d986d4bf63654d2ea19f68b53d7cbb53c60",
+          "incident": "socket-2024-01",
+          "network_calls": {
+            "http:etherscan": 19,
+            "http:llama": 1,
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_call": 9,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 12.251149832998635,
+          "transactions": 133
+        },
+        {
+          "attack": "0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7",
+          "block": 14602790,
+          "classify_seconds": 0,
+          "collect_seconds": 0.834585101052653,
+          "enrich_seconds": 12.994885708001675,
+          "extract_seconds": 0.037355023945565335,
+          "facts_sha256": "f0ff10fcb7cf87e671645821c8f75d41697660a9ee04a86c0ca42dd4b8c7d119",
+          "incident": "beanstalk-2022-04",
+          "network_calls": {
+            "http:etherscan": 22,
+            "http:llama": 1,
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_call": 25,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 13.866826166995452,
+          "transactions": 192
+        }
+      ],
+      "classifier_budget_usd": 1,
+      "cumulative_classifier_cost_usd": 0,
+      "mode": "warm",
+      "model": "jev-1.13.0",
+      "question_sha256": {
+        "c23_guided_lending_accounting_context": "0f0abd880284714756646d57285d5a8b0c94a2a021bda2a6214241bd3e2507cc",
+        "p10_multi_pool_depletion": "60b489739ca1701dc54401044bd25d757f69e31c0ba21ceb7b9f441509901f87"
+      }
+    },
+    "first": {
+      "billed_input_tokens": 1348701,
+      "blocks": [
+        {
+          "additional_flags": 0,
+          "attack": "0xffbbd492e0605a8bb6d490c3cd879e87ff60862b0684160d08fd5711e7a872d3",
+          "block": 22785461,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 0.8785430410061963,
+          "collect_seconds": 0.7587912499875529,
+          "enrich_seconds": 0.8946838330011815,
+          "extract_seconds": 0.04189733300881926,
+          "facts_sha256": "df8a188bf3ef4b6b71ad0dbf31d3708aade80d0e0de9cd2d1fd06f19a5554369",
+          "fresh_classifier_requests": 209,
+          "incident": "resupply-2025-06",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 2.5739159579970874,
+          "transactions": 209,
+          "alerts": [
+            {
+              "transaction": "0xffbbd492e0605a8bb6d490c3cd879e87ff60862b0684160d08fd5711e7a872d3",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.86,
+                "p10_multi_pool_depletion": 0.84
+              }
+            }
+          ]
+        },
+        {
+          "additional_flags": 0,
+          "attack": "0x8b74995d1d61d3d7547575649136b8765acb22882960f0636941c44ec7bbe146",
+          "block": 17740955,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 0.4772694169951137,
+          "collect_seconds": 1.5152210860396735,
+          "enrich_seconds": 0.8970177919982234,
+          "extract_seconds": 0.0994137469533598,
+          "facts_sha256": "c4c8169989a29e47ac695ec936246543f24e1a82b535e42e03cbc3cae072aa7e",
+          "fresh_classifier_requests": 149,
+          "incident": "conic-2023-07",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 2.9889226670056814,
+          "transactions": 149,
+          "alerts": [
+            {
+              "transaction": "0x8b74995d1d61d3d7547575649136b8765acb22882960f0636941c44ec7bbe146",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.89,
+                "p10_multi_pool_depletion": 0.86
+              }
+            }
+          ]
+        },
+        {
+          "additional_flags": 1,
+          "attack": "0xe2912b8bf34d561983f2ae95f34e33ecc7792a2905a3e317fcc98052bce66431",
+          "block": 19771059,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 0.7709888749959646,
+          "collect_seconds": 0.7705481340672122,
+          "enrich_seconds": 0.9059515410044696,
+          "extract_seconds": 0.030632407928351313,
+          "facts_sha256": "e1860e60ee0c74ed9b0178b3a1e21bf45cce7ad3a942fe89e1ee0a37c0bb8bc1",
+          "fresh_classifier_requests": 146,
+          "incident": "pike-2024-04",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 2.4781215410039295,
+          "transactions": 146,
+          "alerts": [
+            {
+              "transaction": "0xe2912b8bf34d561983f2ae95f34e33ecc7792a2905a3e317fcc98052bce66431",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.9,
+                "p10_multi_pool_depletion": 0.68
+              }
+            },
+            {
+              "transaction": "0xcef5799a52168eb7921a4de38e5b82bb7b4ae460ddecd979a74c8a64171ab894",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.74,
+                "p10_multi_pool_depletion": 0.38
+              }
+            }
+          ]
+        },
+        {
+          "additional_flags": 0,
+          "attack": "0xc6c3331fa8c2d30e1ef208424c08c039a89e510df2fb6ae31e5aa40722e28fd6",
+          "block": 19021454,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 0.4240422909933841,
+          "collect_seconds": 1.3376757441001246,
+          "enrich_seconds": 0.8572229590063216,
+          "extract_seconds": 0.04817150488088373,
+          "facts_sha256": "8e38927d21145fb8fa259d6969920d986d4bf63654d2ea19f68b53d7cbb53c60",
+          "fresh_classifier_requests": 133,
+          "incident": "socket-2024-01",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 2.667112665993045,
+          "transactions": 133,
+          "alerts": [
+            {
+              "transaction": "0xc6c3331fa8c2d30e1ef208424c08c039a89e510df2fb6ae31e5aa40722e28fd6",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.8,
+                "p10_multi_pool_depletion": 0.62
+              }
+            }
+          ]
+        },
+        {
+          "additional_flags": 1,
+          "attack": "0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7",
+          "block": 14602790,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 0.6535076250002021,
+          "collect_seconds": 0.48640928421809804,
+          "enrich_seconds": 0.8891054159903433,
+          "extract_seconds": 0.04068367478612345,
+          "facts_sha256": "f0ff10fcb7cf87e671645821c8f75d41697660a9ee04a86c0ca42dd4b8c7d119",
+          "fresh_classifier_requests": 192,
+          "incident": "beanstalk-2022-04",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 2.0697065409913193,
+          "transactions": 192,
+          "alerts": [
+            {
+              "transaction": "0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.84,
+                "p10_multi_pool_depletion": 0.8
+              }
+            },
+            {
+              "transaction": "0x43125a9f55b568222bfa24219f4427b3c16ab8d83d05b506d27720c5da12f30e",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.74,
+                "p10_multi_pool_depletion": 0.71
+              }
+            }
+          ]
+        }
+      ],
+      "classifier_budget_usd": 1,
+      "cumulative_classifier_cost_usd": 0.056645442000004445,
+      "mode": "first",
+      "model": "jev-1.13.0",
+      "question_sha256": {
+        "c23_guided_lending_accounting_context": "0f0abd880284714756646d57285d5a8b0c94a2a021bda2a6214241bd3e2507cc",
+        "p10_multi_pool_depletion": "60b489739ca1701dc54401044bd25d757f69e31c0ba21ceb7b9f441509901f87"
+      }
+    },
+    "second": {
+      "billed_input_tokens": 1348701,
+      "blocks": [
+        {
+          "additional_flags": 0,
+          "attack": "0xffbbd492e0605a8bb6d490c3cd879e87ff60862b0684160d08fd5711e7a872d3",
+          "block": 22785461,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 1.1037774579890538,
+          "collect_seconds": 1.5656542838260066,
+          "enrich_seconds": 0.934560000008787,
+          "extract_seconds": 0.04502354917349294,
+          "facts_sha256": "df8a188bf3ef4b6b71ad0dbf31d3708aade80d0e0de9cd2d1fd06f19a5554369",
+          "fresh_classifier_requests": 209,
+          "incident": "resupply-2025-06",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 3.6490159579989268,
+          "transactions": 209,
+          "alerts": [
+            {
+              "transaction": "0xffbbd492e0605a8bb6d490c3cd879e87ff60862b0684160d08fd5711e7a872d3",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.87,
+                "p10_multi_pool_depletion": 0.87
+              }
+            }
+          ]
+        },
+        {
+          "additional_flags": 0,
+          "attack": "0x8b74995d1d61d3d7547575649136b8765acb22882960f0636941c44ec7bbe146",
+          "block": 17740955,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 0.47933474999445025,
+          "collect_seconds": 0.9463146320777014,
+          "enrich_seconds": 0.9499999170075171,
+          "extract_seconds": 0.10249132591707166,
+          "facts_sha256": "c4c8169989a29e47ac695ec936246543f24e1a82b535e42e03cbc3cae072aa7e",
+          "fresh_classifier_requests": 149,
+          "incident": "conic-2023-07",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 2.4781411250005476,
+          "transactions": 149,
+          "alerts": [
+            {
+              "transaction": "0x8b74995d1d61d3d7547575649136b8765acb22882960f0636941c44ec7bbe146",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.88,
+                "p10_multi_pool_depletion": 0.85
+              }
+            }
+          ]
+        },
+        {
+          "additional_flags": 1,
+          "attack": "0xe2912b8bf34d561983f2ae95f34e33ecc7792a2905a3e317fcc98052bce66431",
+          "block": 19771059,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 0.45944879099261016,
+          "collect_seconds": 1.1601307508681202,
+          "enrich_seconds": 0.8848148329998367,
+          "extract_seconds": 0.03365133312763646,
+          "facts_sha256": "e1860e60ee0c74ed9b0178b3a1e21bf45cce7ad3a942fe89e1ee0a37c0bb8bc1",
+          "fresh_classifier_requests": 146,
+          "incident": "pike-2024-04",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 2.538045916997362,
+          "transactions": 146,
+          "alerts": [
+            {
+              "transaction": "0xe2912b8bf34d561983f2ae95f34e33ecc7792a2905a3e317fcc98052bce66431",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.9,
+                "p10_multi_pool_depletion": 0.7
+              }
+            },
+            {
+              "transaction": "0xcef5799a52168eb7921a4de38e5b82bb7b4ae460ddecd979a74c8a64171ab894",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.75,
+                "p10_multi_pool_depletion": 0.4
+              }
+            }
+          ]
+        },
+        {
+          "additional_flags": 0,
+          "attack": "0xc6c3331fa8c2d30e1ef208424c08c039a89e510df2fb6ae31e5aa40722e28fd6",
+          "block": 19021454,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 0.49886429199250415,
+          "collect_seconds": 1.1879104488907615,
+          "enrich_seconds": 0.8639650830009487,
+          "extract_seconds": 0.051867177098756656,
+          "facts_sha256": "8e38927d21145fb8fa259d6969920d986d4bf63654d2ea19f68b53d7cbb53c60",
+          "fresh_classifier_requests": 133,
+          "incident": "socket-2024-01",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 2.6026075419940753,
+          "transactions": 133,
+          "alerts": [
+            {
+              "transaction": "0xc6c3331fa8c2d30e1ef208424c08c039a89e510df2fb6ae31e5aa40722e28fd6",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.82,
+                "p10_multi_pool_depletion": 0.65
+              }
+            }
+          ]
+        },
+        {
+          "additional_flags": 1,
+          "attack": "0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7",
+          "block": 14602790,
+          "classifier_cache_hits": 0,
+          "classify_seconds": 0.9508924999972805,
+          "collect_seconds": 1.476324907009257,
+          "enrich_seconds": 0.8800183749990538,
+          "extract_seconds": 0.03878046799218282,
+          "facts_sha256": "f0ff10fcb7cf87e671645821c8f75d41697660a9ee04a86c0ca42dd4b8c7d119",
+          "fresh_classifier_requests": 192,
+          "incident": "beanstalk-2022-04",
+          "known_attack_caught": true,
+          "network_calls": {
+            "rpc:debug_traceBlockByNumber": 1,
+            "rpc:eth_getBlockByNumber": 3,
+            "rpc:eth_getBlockReceipts": 1
+          },
+          "total_seconds": 3.346016958996188,
+          "transactions": 192,
+          "alerts": [
+            {
+              "transaction": "0xcd314668aaa9bbfebaf1a0bd2b6553d01dd58899c508d4729fa7311dc5d33ad7",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.84,
+                "p10_multi_pool_depletion": 0.78
+              }
+            },
+            {
+              "transaction": "0x43125a9f55b568222bfa24219f4427b3c16ab8d83d05b506d27720c5da12f30e",
+              "scores": {
+                "c23_guided_lending_accounting_context": 0.73,
+                "p10_multi_pool_depletion": 0.73
+              }
+            }
+          ]
+        }
+      ],
+      "classifier_budget_usd": 1,
+      "cumulative_classifier_cost_usd": 0.113290884000003,
+      "mode": "second",
+      "model": "jev-1.13.0",
+      "question_sha256": {
+        "c23_guided_lending_accounting_context": "0f0abd880284714756646d57285d5a8b0c94a2a021bda2a6214241bd3e2507cc",
+        "p10_multi_pool_depletion": "60b489739ca1701dc54401044bd25d757f69e31c0ba21ceb7b9f441509901f87"
+      }
+    }
+  }
+}
